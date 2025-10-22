@@ -1,0 +1,232 @@
+.footer {
+  background: #ffffff; /* أبيض أنيق */
+  color: black; /* أزرق غامق متناسق مع اللوجو */
+  padding: 50px 0 20px;
+  direction: rtl;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* تقسيم المحتوى */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 20px;
+}
+
+/* العناوين */
+.footer-section h3 {
+  color: #003399; /* أحمر اللوجو */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* القوائم */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+/* الروابط */
+.footer-section ul li a {
+  color:black; /* أزرق */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-section ul li a:hover {
+  color: #003399; /* أحمر عند hover */
+  transform: translateX(-3px);
+}
+
+/* السوشيال ميديا */
+.social a {
+  color: black;
+  margin-right: 12px;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  color: #003399;
+  transform: scale(1.1);
+}
+
+/* النص السفلي */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 15px;
+  font-size: 14px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+
+  .social a {
+    margin: 0 8px;
+  }
+}
+
+
+/* اللوجو في الفوتر */
+.footer-logo {
+  width: 90px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 3px 6px rgba(228, 30, 38, 0.4));
+}
+/* ✅ جعل اللوجو والكلام على اليمين */
+.footer-section {
+  text-align: right;
+}
+
+/* تأكيد أن اللوجو بمحاذاة اليمين */
+.footer-logo {
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+}
+/* ✅ محاذاة كاملة لليمين لكل النصوص والعناوين داخل الفوتر */
+.footer-section h3,
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  text-align: right;
+}
+/* ✅ تنسيق روابط الاتصال والبريد */
+.footer-link {
+  color: black; /* نفس الأزرق الغامق */
+  text-decoration: none;
+  margin-right: 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #003399; /* أحمر عند المرور */
+  text-decoration: underline;
+}
+.footer-link[href^="tel"] {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+
+/* 🎯 تحسين الفوتر على الموبايل */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 10px 15px;
+    text-align: center !important;
+  }
+
+  .footer-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .footer-section {
+    flex: 1 1 100% !important;
+    width: 100%;
+    margin: 10px 0 !important;
+    text-align: center !important;
+  }
+
+  /* اللوجو */
+  .footer-logo {
+    width: 80px !important;
+    margin: 0 auto 15px !important;
+    display: block;
+  }
+
+  /* العناوين */
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  /* القوائم */
+  .footer-section ul {
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  /* الروابط */
+  .footer-section ul li a {
+    font-size: 15px;
+  }
+
+  /* أي نص داخل الفوتر */
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  /* السوشيال ميديا */
+  .social {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .social a {
+    font-size: 20px !important;
+    margin: 0 10px !important;
+  }
+
+  /* النص السفلي */
+  .footer-bottom {
+    font-size: 13px;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent !important;
+  }
+
+  /* تعديل بسيط لمحاذاة الأرقام */
+  .footer-link[href^="tel"] {
+    direction: ltr !important;
+    display: inline-block;
+  }
+
+  /* إخفاء أي فراغات زائدة */
+  .footer * {
+    box-sizing: border-box;
+  }
+}

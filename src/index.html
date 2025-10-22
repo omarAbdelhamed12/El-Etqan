@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>شركة اتقان | Itqan Business Solutions</title>
+  <link rel="icon" href="assets/img/logo_search.png" type="image/png">
+
+
+  <!-- Meta Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="شركة اتقان لحلول الأعمال المتكاملة - أنظمة مراقبة، حضور وانصراف، شبكات، وبرمجيات إدارة المؤسسات."
+  />
+  <meta
+    name="keywords"
+    content="اتقان, Itqan, حلول الأعمال, كاميرات مراقبة, بصمة, شبكات, برمجة, أنظمة تحكم"
+  />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icon Fonts -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- WOW.js (for animations like Itqan website) -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Global Styles -->
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    /* Spinner styling */
+    #spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(-50%, -50%);
+      z-index: 1050;
+    }
+
+    #spinner.hide {
+      display: none;
+    }
+
+    /* Scrollbar (optional like itqan) */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #0d6efd;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Spinner -->
+<div id="spinner">
+  <div
+    class="spinner-border text-primary"
+    style="width: 3rem; height: 3rem;"
+    role="status"
+  >
+    <span class="visually-hidden">جاري التحميل...</span>
+  </div>
+</div>
+
+<!-- Angular App Root -->
+<app-root></app-root>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- WOW.js Animation Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script>
+  // تفعيل الحركات مثل موقع اتقان
+  new WOW().init();
+
+  // إخفاء السبينر بعد تحميل الصفحة
+  window.addEventListener("load", () => {
+    const spinner = document.getElementById("spinner");
+    if (spinner) spinner.classList.add("hide");
+  });
+</script>
+</body>
+</html>
+<!-- أيقونات التواصل العائمة -->
+<div class="floating-icons">
+  <a href="https://wa.me/201110074501" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+201110074501" class="phone">
+    <i class="fas fa-phone"></i>
+  </a>
+</div>
+
+<style>
+  /* الحاوية */
+  .floating-icons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+  }
+
+  /* الأزرار */
+  .floating-icons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  /* واتساب */
+  .floating-icons a.whatsapp {
+    background-color: #25D366;
+  }
+  .floating-icons a.whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.1);
+  }
+
+  /* الهاتف */
+  .floating-icons a.phone {
+    background-color: #003399;
+  }
+  .floating-icons a.phone:hover {
+    background-color: #001f80;
+    transform: scale(1.1);
+  }
+</style>
+
+

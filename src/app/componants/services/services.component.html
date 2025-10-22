@@ -1,0 +1,186 @@
+<!-- Services Header -->
+<section class="services-header text-white text-center d-flex align-items-center justify-content-center"
+         [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <h1 class="fw-bold mb-3">
+      {{ currentLang === 'ar' ? 'ما الذي تبحث عنه اليوم؟' : 'What Are You Looking For Today?' }}
+    </h1>
+    <p class="mb-3">
+      <a routerLink="/home" class="text-decoration-none fw-bold">
+        {{ currentLang === 'ar' ? 'الصفحة الرئيسية' : 'Home' }}
+      </a> >
+      {{ currentLang === 'ar'
+      ? 'قائمة خدمات متكاملة في مجال الأنظمة الأمنية'
+      : 'A full range of integrated security system services' }}
+    </p>
+  </div>
+</section>
+
+<!-- القسم الأول -->
+<section class="services-products py-5" [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-center section-title">
+      <a routerLink="/camera" class="section-link">
+        {{ currentLang === 'ar' ? 'أنظمة الأمن والمراقبة' : 'Security & Surveillance Systems' }}
+      </a>
+    </h2>
+
+    <div class="row g-4">
+      <!-- كاميرات المراقبة -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/camira.png" class="card-img-top" alt="Camera">
+          <div class="card-body">
+            <h5 class="product-title" routerLink="/camera">
+              {{ currentLang === 'ar' ? 'تركيب كاميرات المراقبة ومراقبتها' : 'Installation & Monitoring of Cameras' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'أنظمة مراقبة حديثة لضمان أمان المنشآت.' : 'Modern monitoring systems ensuring facility safety.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- جهاز البصمة -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/fingerprint.png" class="card-img-top" alt="Fingerprint">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة التحكم في الدخول والأنظمة البيومترية' : 'Access Control & Biometric Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'تحكم دقيق في حضور الموظفين باستخدام أحدث الأجهزة.' : 'Accurate attendance control with advanced devices.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- الاكسس كنترول -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/access_control.png" class="card-img-top" alt="Access Control">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة كشف التسلل والإنذار' : 'Intrusion Detection & Alarm Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'نظام تحكم ذكي في عمليات الدخول والخروج للأبواب.' : 'Smart access control for entry and exit operations.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- الحرائق -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/access_control.png" class="card-img-top" alt="Fire System">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة كشف وإخماد الحرائق' : 'Fire Detection & Suppression Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'أنظمة آمنة وذكية لمكافحة الحرائق بكفاءة عالية.' : 'Smart and efficient fire safety and suppression systems.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- القسم الثاني -->
+<section class="services-products alt py-5" [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-center section-title">
+      <a routerLink="/cabling_networking" class="section-link">
+        {{ currentLang === 'ar' ? 'الكابلات الهيكلية والشبكات' : 'Structured Cabling & Networking' }}
+      </a>
+    </h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/optical.jpg" class="card-img-top" alt="Fiber Optic">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'تركيب الألياف الضوئية' : 'Optical Fiber Installation' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'تصميم وتنفيذ الشبكات باستخدام أحدث تقنيات الكابلات الهيكلية.' : 'Design and implementation using latest cabling technologies.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Data-Center.jpg" class="card-img-top" alt="Data Center">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'البنية التحتية لشبكات البيانات' : 'Data Network Infrastructure' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'حلول متكاملة لتوصيل الإنترنت عالي السرعة عبر الألياف الضوئية.' : 'Integrated high-speed internet solutions using fiber optics.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Public address.png" class="card-img-top" alt="Audio System">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة الصوت' : 'Public Address Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'حلول صوتية متكاملة للمباني والمنشآت.' : 'Comprehensive sound systems for buildings and facilities.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- القسم الثالث -->
+<section class="services-products py-5" [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-center section-title">
+      <a routerLink="/solution" class="section-link">
+        {{ currentLang === 'ar' ? 'الحلول المتخصصة' : 'Specialized Solutions' }}
+      </a>
+    </h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Nurse-Call.png" class="card-img-top" alt="Nurse Call">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة استدعاء الممرضات' : 'Nurse Call Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'أنظمة ذكية لتحسين التواصل داخل المنشآت الطبية.' : 'Smart systems for better communication in healthcare facilities.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Parking.png" class="card-img-top" alt="Parking System">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة إدارة مواقف السيارات' : 'Parking Management Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar' ? 'حلول ذكية لتنظيم وإدارة المواقف بكفاءة عالية.' : 'Smart and efficient parking management solutions.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

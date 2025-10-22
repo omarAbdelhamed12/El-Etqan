@@ -1,0 +1,504 @@
+/* ==========================
+   سكشن About Intro (أول سكشن مع الصورة الكبيرة)
+========================== */
+.about-intro {
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+  height: 90vh; /* 🔹 زودنا الطول لتكبير الصورة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+/* الخلفية */
+.about-bg {
+  background: url('/assets/img/about.png') center center / cover no-repeat;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  filter: brightness(0.4);
+}
+
+/* النص فوق الصورة */
+/* النصوص فوق الصورة */
+.about-intro .container {
+  position: relative;
+  z-index: 1;
+  transform: translateY(60px); /* قللنا قيمة translateY عشان يطلع لفوق */
+  text-align: center;
+  color: white; /* كل النصوص باللون الأبيض */
+}
+
+.about-intro h1 {
+  color: #b30404 /* اللون الأخضر */
+}
+
+.about-intro p {
+  color: white !important; /* للتأكيد على اللون الأبيض */
+}
+
+/* العنوان */
+.about-intro h2 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* النصوص */
+.about-intro p {
+  color: white;
+  font-size: 1.1rem;
+}
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .about-intro {
+    padding-top: 220px; /* زودنا المسافة تحت الهيدر */
+    padding-bottom: 40px;
+  }
+  .about-intro .container {
+    transform: translateY(0);
+    max-width: 100%;
+  }
+  .about-intro h1 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  .about-intro p {
+    font-size: 0.8rem;
+    text-align: center !important;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+/* ==========================
+   صناديق المميزات
+========================== */
+.why-choose .feature-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.why-choose .feature-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   صور العملاء
+========================== */
+.clients img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* ==========================
+   قسم تواصل معنا
+========================== */
+.contact-us {
+  background-color: #f8f3fa;
+}
+
+.breadcrumb-container {
+  direction: rtl;
+  color: white;
+  font-size: 1rem;
+}
+
+.breadcrumb-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #003399;
+}
+
+.separator {
+  margin: 0 6px;
+  color: white;
+}
+
+.breadcrumb-current {
+  color: white;
+}
+
+/* ==========================
+   سكشن About Wrapper (نص + صورة)
+========================== */
+.about-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+  background: #fff;
+}
+
+/* الصورة */
+.about-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* النص */
+.about-wrapper h2 {
+  color: #00214d;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.about-wrapper p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+/* الاتجاهات حسب اللغة (اعتماداً على dir) */
+:host-context([dir='rtl']) .about-wrapper {
+  direction: rtl;
+}
+
+:host-context([dir='rtl']) .about-wrapper .col-lg-6 {
+  text-align: right;
+}
+
+:host-context([dir='ltr']) .about-wrapper {
+  direction: ltr;
+}
+
+:host-context([dir='ltr']) .about-wrapper .col-lg-6 {
+  text-align: left;
+}
+
+/* استجابة الموبايل */
+@media (max-width: 992px) {
+  .about-wrapper {
+    padding: 40px 0;
+  }
+
+  .about-wrapper .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-wrapper .col-lg-6 {
+    order: unset !important;
+    /* 🔹 خلي النص حسب اللغة بدل ما يكون في النص */
+    text-align: inherit !important;
+  }
+
+  .about-image {
+    margin-bottom: 25px;
+    max-width: 90%;
+  }
+
+  .about-wrapper h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-wrapper p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Features list */
+.features-list {
+  margin-top: 20px;
+}
+
+.check-icon {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: #f8f9fa;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-item {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.about-wrapper .col-lg-6.text-content {
+  text-align: right !important;
+}
+
+/* إزالة الأجزاء المكررة */
+
+
+/* ==========================
+   سكشن Vision & Mission
+========================== */
+#vision-mission {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  color: #0c1a2b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* تقسيم السكشن نصين */
+.split-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* اليسار: النصوص */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==========================
+   اليمين: الصورة (بعد التعديل)
+========================== */
+.right-side {
+  flex: 0 0 50%; /* تاخد نص السكشن */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* يمنع خروج الصورة */
+}
+
+/* الصورة */
+.right-side .side-image {
+  width: 110%;        /* أكبر من النص */
+  height: 100%;       /* تملأ كامل الارتفاع */
+  object-fit: cover;  /* تندمج داخل المساحة */
+  border-radius: 0;   /* بدون زوايا */
+  box-shadow: none;   /* بدون ظل */
+  transform: scale(1.1); /* تكبير بسيط */
+  transition: transform 0.5s ease;
+}
+
+/* تأثير بسيط عند التحويم */
+.right-side .side-image:hover {
+  transform: scale(1.15);
+}
+
+/* كل بطاقة */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+}
+
+/* accordion */
+.accordion {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion .icon {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.accordion .icon.active {
+  transform: rotate(45deg);
+}
+
+/* نصوص مخفية */
+.panel {
+  display: none;
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .split-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-side .side-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+}
+
+.section-title::after {
+  display: none !important;
+}
+.section-title::before {
+  display: none !important;
+}
+.feature-box i.text-warning {
+  color: #003399 !important;
+}
+
+
+/* تراكب خفيف فوق الصورة */
+.right-side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 48, 86, 0.15);
+}
+
+#vision-mission {
+  position: relative;
+  background: url('/assets/img/vision.png') center center / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 80px 0;
+}
+
+#vision-mission::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+#vision-mission .container {
+  position: relative;
+  z-index: 1;
+}
+
+.split-section {
+  display: flex;
+  justify-content: flex-start;
+  direction: rtl; /* لجعل الاتجاه من اليمين لليسار */
+}
+
+.left-side {
+  width: 40%; /* الجزء النصي أصغر */
+}
+
+.right-side {
+  width: 60%; /* الصورة تأخذ مساحة أكبر */
+  position: relative;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.accordion {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  text-align: right;
+  width: 100%;
+  cursor: pointer;
+}
+
+.panel p {
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+.about-wrapper .col-lg-6 {
+  text-align: right !important;
+}
+/* عندما تكون الصفحة إنجليزية */
+:host-context([dir='ltr']) .about-wrapper .col-lg-6 {
+  text-align: right !important; /* الكلام على اليمين */
+}
+
+/* عندما تكون الصفحة عربية */
+:host-context([dir='rtl']) .about-wrapper .col-lg-6 {
+  text-align: right !important; /* برضو على اليمين */
+}
+.about-wrapper p {
+  text-align: right;
+  line-height: 1.8;
+}
+/* Responsive adjustments for Vision & Mission section on mobile */
+@media (max-width: 992px) {
+  #vision-mission .split-section {
+    flex-direction: column; /* الأعمدة تصبح فوق بعض */
+    align-items: center;
+    gap: 20px; /* مسافة بين النص والصورة */
+  }
+
+  #vision-mission .left-side,
+  #vision-mission .right-side {
+    width: 100%; /* كل قسم ياخذ العرض كامل */
+  }
+
+  #vision-mission .left-side {
+    text-align: center; /* النص يصبح في الوسط على الموبايل */
+  }
+
+  #vision-mission .accordion {
+    text-align: center; /* نص الـ accordion يكون في الوسط */
+  }
+
+  #vision-mission .panel p {
+    text-align: center; /* نصوص المحتوى تكون في الوسط */
+  }
+
+  #vision-mission .right-side .side-image {
+    max-width: 100%;
+    height: auto; /* يحافظ على النسبة */
+    margin-bottom: 20px;
+    transform: scale(1); /* إزالة التكبير على الموبايل */
+  }
+}

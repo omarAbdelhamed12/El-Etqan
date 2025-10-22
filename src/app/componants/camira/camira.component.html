@@ -1,0 +1,105 @@
+<section class="camera-header text-center d-flex align-items-center justify-content-center"
+         [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <h1 class="fw-bold mb-3">
+      {{ currentLang === 'ar' ? 'أنظمة الأمن والمراقبة' : 'Security and Surveillance Systems' }}
+    </h1>
+    <p class="mb-3">
+      <!--
+      <a routerLink="/service" class="fw-bold hover-link">
+        {{ currentLang === 'ar' ? 'خدماتنا' : 'Our Services' }}
+      </a>
+      > -->
+      <span class="text-white">
+        {{ currentLang === 'ar'
+        ? 'في تقديم لك أفضل الأسعار في مصر مع جودة مضمونة وتركيب احترافي.'
+        : 'Offering you the best prices in Egypt with guaranteed quality and professional installation.' }}
+      </span>
+    </p>
+  </div>
+</section>
+
+<section class="services-products py-5"
+         [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- كاميرات المراقبة -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/camira.png" class="card-img-top" alt="كاميرات المراقبة">
+          <div class="card-body">
+            <h5 class="product-title" routerLink="/camera">
+              {{ currentLang === 'ar'
+              ? 'تركيب كاميرات المراقبة ومراقبتها'
+              : 'Installation and Monitoring of Security Cameras' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'أنظمة مراقبة حديثة لضمان أمان المنشآت.'
+              : 'Modern surveillance systems to ensure facility security.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- جهاز البصمة -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/access_control.png" class="card-img-top" alt="جهاز البصمة">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar'
+              ? 'أنظمة التحكم في الدخول والأنظمة البيومترية'
+              : 'Access Control and Biometric Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'تحكم دقيق في حضور الموظفين باستخدام أحدث الأجهزة.'
+              : 'Precise employee attendance control using advanced devices.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- البنية التحتية -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/Data-Center.jpg" class="card-img-top" alt="البنية التحتية">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar'
+              ? 'البنية التحتية لشبكات البيانات'
+              : 'Data Network Infrastructure' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'نظام تحكم ذكي في عمليات الدخول والخروج للأبواب.'
+              : 'Smart system for managing door access operations.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- أنظمة الحرائق -->
+      <div class="col-md-3">
+        <div class="card product-card text-center">
+          <img src="assets/img/fasfas.png" class="card-img-top" alt="أنظمة الحرائق">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar'
+              ? 'أنظمة كشف وإخماد الحرائق'
+              : 'Fire Detection and Suppression Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'نظام متكامل لحماية المنشآت من الحرائق.'
+              : 'Integrated system for facility fire protection.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

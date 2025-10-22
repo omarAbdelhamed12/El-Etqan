@@ -1,0 +1,81 @@
+
+
+<!-- Header Section -->
+<section class="solution-header text-center d-flex align-items-center justify-content-center"
+         [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <h1 class="fw-bold mb-3">
+      {{ currentLang === 'ar' ? 'حلول الأنظمة المتكاملة' : 'Integrated System Solutions' }}
+    </h1>
+    <p class="mb-3">
+      <a routerLink="/service" class="fw-bold hover-link">
+        {{ currentLang === 'ar' ? 'خدماتنا' : 'Our Services' }}
+      </a> >
+      <span class="text-white">
+        {{ currentLang === 'ar'
+        ? 'نوفر لك حلولًا شاملة في مجال الأنظمة التقنية والبنية التحتية.'
+        : 'We provide comprehensive solutions in technology and infrastructure systems.' }}
+      </span>
+    </p>
+  </div>
+</section>
+
+<!-- Solutions Section -->
+<section class="services-products py-5" [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- حل 1 -->
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Nurse-Call.png" class="card-img-top" alt="حلول الأمان">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة استدعاء الممرضات' : 'Nurse Call Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'أنظمة مراقبة وتحكم ذكية تضمن أعلى درجات الأمان.'
+              : 'Smart monitoring and control systems ensuring the highest safety standards.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- حل 2 -->
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Parking.png" class="card-img-top" alt="البنية التحتية">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة إدارة مواقف السيارات' : 'Parking Management Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'حلول ذكية لتنظيم وإدارة مواقف السيارات بسهولة وكفاءة.'
+              : 'Smart solutions for efficient and easy parking management.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- حل 3 -->
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/optical.jpg" class="card-img-top" alt="الألياف الضوئية">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'تركيب الألياف الضوئية' : 'Optical Fiber Installation' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'تصميم وتنفيذ بنية تحتية تقنية متكاملة للشركات والمشاريع الكبرى.'
+              : 'Design and implementation of complete technical infrastructure for companies and large projects.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

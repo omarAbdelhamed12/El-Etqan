@@ -1,0 +1,187 @@
+.camera-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+  url('/assets/img/SECURITY.jpg') center center / cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* 🔹 العنوان */
+.camera-header h1 {
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+  transform: translateY(60px);
+}
+
+/* 🔹 الوصف */
+.camera-header p {
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  transform: translateY(60px);
+  line-height: 1.7;
+}
+
+/* 🔹 اللينك */
+.camera-header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.camera-header a:hover {
+  color: #003399; /* أحمر شعارك */
+}
+
+
+/* 🎯 القسم العام */
+.services-products {
+  background-color: #fff;
+  color: #000;
+  padding: 60px 0;
+}
+
+/* عنوان القسم */
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  margin-top: 20px;   /* 🔹 المسافة من فوق */
+  margin-bottom: 40px; /* 🔹 المسافة من تحت */
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #00214d;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* 🎁 الكروت */
+.product-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 420px; /* كل الكروت نفس الطول */
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* الصورة داخل الكارت */
+.product-card img {
+  height: 220px; /* ارتفاع الصورة */
+  object-fit: contain; /* تحافظ على تناسب الصورة */
+  background: #f8f8f8; /* خلفية رمادية ناعمة */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.03); /* تكبير بسيط عند المرور */
+}
+
+/* العنوان */
+.product-title {
+  color: #00214d;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.product-title:hover {
+  color: #000;
+}
+
+
+
+/* ✨ حركة دخول ناعمة */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card {
+  animation: fadeInUp 0.7s ease both;
+}
+
+/* 📱 تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .product-card {
+    height: auto;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+.about-section {
+  background-color: #fff;
+  direction: rtl;
+  color: #333;
+}
+
+.about-section h2 {
+  color: #00214d;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.about-section p {
+  text-align: justify;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* الصورة */
+.about-img {
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .about-section h2 {
+    text-align: center;
+  }
+  .about-section p {
+    text-align: center;
+  }
+}
+

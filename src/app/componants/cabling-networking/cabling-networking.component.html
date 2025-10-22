@@ -1,0 +1,77 @@
+<section class="cabling-header text-center d-flex align-items-center justify-content-center"
+         [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <h1 class="fw-bold mb-3">
+      {{ currentLang === 'ar' ? 'أنظمة الكابلات والشبكات' : 'Cabling and Networking Systems' }}
+    </h1>
+    <p class="mb-3">
+      <a routerLink="/service" class="fw-bold hover-link">
+        {{ currentLang === 'ar' ? 'خدماتنا' : 'Our Services' }}
+      </a> >
+      <span class="text-white">
+        {{ currentLang === 'ar'
+        ? 'تصميم وتنفيذ الشبكات الداخلية والهيكلية بجودة عالية وأداء مستقر.'
+        : 'Design and implementation of internal and structured networks with high quality and stable performance.' }}
+      </span>
+    </p>
+  </div>
+</section>
+
+<section class="services-products py-5" [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- كارت 1 -->
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/optical.jpg" class="card-img-top" alt="شبكات داخلية">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'تركيب الألياف الضوئية' : 'Optical Fiber Installation' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'شبكات متكاملة للمؤسسات باستخدام أحدث التقنيات.'
+              : 'Comprehensive networks for enterprises using the latest technologies.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- كارت 2 -->
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Data-Center.jpg" class="card-img-top" alt="شبكات هيكلية">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'البنية التحتية لشبكات البيانات' : 'Data Network Infrastructure' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'تنظيم وتوصيل الكابلات بطريقة احترافية تضمن الأداء والاستدامة.'
+              : 'Professional cable management ensuring performance and reliability.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- كارت 3 -->
+      <div class="col-md-4">
+        <div class="card product-card text-center">
+          <img src="assets/img/Public address.png" class="card-img-top" alt="أنظمة الصوت">
+          <div class="card-body">
+            <h5 class="product-title">
+              {{ currentLang === 'ar' ? 'أنظمة الصوت' : 'Audio Systems' }}
+            </h5>
+            <p class="card-text">
+              {{ currentLang === 'ar'
+              ? 'نوفر أجهزة راوتر، سويتشات، واي فاي بجودة عالية.'
+              : 'We provide routers, switches, and Wi-Fi devices with high quality.' }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

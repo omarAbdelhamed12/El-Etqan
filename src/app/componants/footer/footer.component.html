@@ -1,0 +1,58 @@
+<footer class="footer" [dir]="currentLang">
+  <div class="container">
+
+    <div class="footer-content d-flex flex-column flex-md-row justify-content-between">
+
+      <!-- العمود الأول: About -->
+      <div class="footer-section about mb-4 mb-md-0"
+           [ngClass]="{'text-center text-md-start': currentLang==='ar', 'text-center text-md-end': currentLang==='en'}">
+        <img src="assets/img/logo.png" alt="Etqan Logo" class="footer-logo mb-3">
+        <p>
+          {{ currentLang==='ar' ?
+          'نسعى لتقديم حلول تقنية مبتكرة تساعدك على تطوير أعمالك وتحقيق أهدافك بأعلى كفاءة.' :
+          'We strive to provide innovative tech solutions to help you grow your business and achieve your goals efficiently.'
+          }}
+        </p>
+      </div>
+
+      <!-- العمود الثاني: Links -->
+      <div class="footer-section links mb-4 mb-md-0"
+           [ngClass]="{'text-center text-md-start': currentLang==='ar', 'text-center text-md-end': currentLang==='en'}">
+        <h3>{{ currentLang==='ar' ? 'روابط سريعة' : 'Quick Links' }}</h3>
+        <ul [ngClass]="{'text-start': currentLang==='ar', 'text-end': currentLang==='en'}">
+          <li><a routerLink="/home">{{ currentLang==='ar' ? 'الرئيسية' : 'Home' }}</a></li>
+          <li><a routerLink="/service">{{ currentLang==='ar' ? 'خدماتنا' : 'Services' }}</a></li>
+          <li><a routerLink="/home-about">{{ currentLang==='ar' ? 'من نحن' : 'About Us' }}</a></li>
+          <li><a routerLink="/contact-us">{{ currentLang==='ar' ? 'اتصل بنا' : 'Contact Us' }}</a></li>
+        </ul>
+      </div>
+
+      <!-- العمود الثالث: Contact -->
+      <div class="footer-section contact"
+           [ngClass]="{'text-center text-md-start': currentLang==='ar', 'text-center text-md-end': currentLang==='en'}">
+        <h3>{{ currentLang==='ar' ? 'تواصل معنا' : 'Contact Us' }}</h3>
+        <p><i class="fa fa-phone"></i> <a href="tel:+20222739186" class="footer-link">+2 02 227 391 86</a></p>
+        <p><i class="fa fa-phone"></i> <a href="tel:+20222739187" class="footer-link">+2 02 227 391 87</a></p>
+        <p><i class="fa fa-phone"></i> <a href="tel:+20222731904" class="footer-link">+2 02 227 319 04</a></p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:info@Al-itqan.net" class="footer-link">info@Al-itqan.net</a></p>
+
+        <div class="social mt-2">
+          <a href="https://www.facebook.com/share/17RuSwh8tq/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/201110074501" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr />
+
+    <div class="footer-bottom text-center">
+      <p>{{ currentLang==='ar' ? '© 2025 جميع الحقوق محفوظة لشركة إتقان' : '© 2025 All rights reserved to Etqan' }}</p>
+    </div>
+
+  </div>
+</footer>

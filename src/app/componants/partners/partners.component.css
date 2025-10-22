@@ -1,0 +1,112 @@
+.about-intro {
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+  height: 60vh; /* 🔹 زودنا الطول لتكبير الصورة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+/* الخلفية */
+.about-bg {
+  background: url('/assets/img/about-image.jpg') center center / cover no-repeat;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* النص فوق الصورة */
+.about-intro .container {
+  position: relative;
+  z-index: 1;
+  transform: translateY(40px);
+  text-align: center;
+}
+
+/* العنوان */
+.about-intro h2 {
+  color: black;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* النصوص */
+.about-intro p {
+  color: black;
+  font-size: 1.1rem;
+}
+.partners-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 0; /* بدون مسافة بين الصور */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.partners-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
+}
+
+.partner-card {
+  flex: 0 0 auto; /* كل صورة تاخد عرضها الطبيعي */
+  text-align: center;
+  background: transparent; /* بدون خلفية */
+}
+
+/* أزرار الأسهم */
+button.btn-warning {
+  background-color: #003399 !important;
+  color: #fff !important;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-warning:hover {
+  background-color: #002080 !important;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .partner-card {
+    width: 120px;
+  }
+}
+/* Partners Section - Mobile */
+@media (max-width: 767px) {
+  .partners-wrapper {
+    overflow-x: auto; /* تمكين التمرير الأفقي */
+    -webkit-overflow-scrolling: touch; /* smooth scroll على iOS */
+    gap: 10px; /* المسافة بين البطاقات */
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+  }
+
+  .partner-card {
+    flex: 0 0 auto; /* تمنع الانكماش */
+    width: 120px;   /* أصغر حجم على الموبايل */
+    margin-right: 10px;
+  }
+
+  /* إزالة الأسهم أو تصغيرها */
+  .partners button {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .partners-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}

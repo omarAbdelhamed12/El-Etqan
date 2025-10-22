@@ -1,0 +1,140 @@
+/* 🟦 Header */
+.services-header {
+  background: url('/assets/img/service_imag.jpg') center center / cover no-repeat;
+  height: 45vh;
+  color: white; /* ✅ يخلي كل النصوص داخل الهيدر بيضاء */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ يوسّط الكلام عموديًا */
+  text-align: center;
+  padding-top: 95px; /* ✅ ينزل الكلام لتحت شوية */
+}
+
+/* عنوان الهيدر */
+.services-header h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: white; /* ✅ تأكيد إن العنوان أبيض */
+}
+
+/* نص المسار (breadcrumb) */
+.breadcrumb-text {
+  color: white; /* ✅ يخلي النص أبيض */
+  font-size: 1rem;
+}
+
+/* روابط المسار */
+.breadcrumb-link {
+  color: white; /* ✅ يخلي الروابط بيضاء */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb-link:hover {
+  color: white; /* ✨ لون ذهبي بسيط عند المرور */
+}
+
+
+/* 🩶 Sections */
+.services-products {
+  background-color: #fff;
+}
+
+.services-products.alt {
+  background-color: #f9f9f9;
+}
+
+/* العناوين */
+.section-title {
+  color: #00214d;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* 🩵 الكروت */
+.product-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  height: 220px;
+  object-fit: contain;
+  background: #f6f6f6;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.04);
+}
+
+.product-title {
+  color: #00214d;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.product-title:hover {
+  color: #000;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ✨ دخول ناعم */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card {
+  animation: fadeInUp 0.7s ease both;
+}
+.section-link {
+  color: black; /* نفس لون العنوان */
+  text-decoration: none !important; /* ❌ يشيل الخط نهائيًا */
+  transition: color 0.3s ease;
+}
+
+.section-link:hover {
+  color: #003399; /* أحمر عند المرور */
+  text-decoration: none; /* يضمن مفيش خط حتى في hover */
+}
+
+.section-title::after {
+  display: none !important;
+}
+.section-title::before {
+  display: none !important;
+}
+.services-header a {
+  color: white !important; /* ✅ يجعل كلمة "الرئيسية" بيضاء */
+  text-decoration: none; /* يشيل الخط */
+  transition: color 0.3s ease;
+}
+
+.services-header a:hover {
+  color: red !important; /* ✨ لون ذهبي عند المرور */
+}
+

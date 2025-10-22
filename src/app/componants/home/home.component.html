@@ -1,0 +1,203 @@
+<!-- Hero Section -->
+<section class="hero position-relative d-flex align-items-center" style="height: 95vh; overflow: hidden;">
+  <!-- الخلفية -->
+  <div class="hero-bg"></div>
+
+  <!-- الفلتر المائل -->
+  <div class="hero-overlay"></div>
+
+  <!-- المحتوى على جانب الشاشة -->
+  <div class="hero-content">
+    <h1>{{ 'HERO_TITLE' | translate }}</h1>
+    <p>{{ 'HERO_DESCRIPTION' | translate }}</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services py-5 text-center" style="background-color: #fff;">
+  <div class="container">
+    <h2 class="mb-4">{{ 'SERVICES_TITLE' | translate }}</h2>
+
+    <div class="d-flex align-items-center justify-content-center position-relative">
+      <!-- سهم اليسار -->
+      <button class="btn btn-warning me-3" (click)="scrollServices(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- الشريط الأفقي -->
+      <div class="services-wrapper d-flex overflow-hidden" #servicesRow>
+        <div
+          class="service-card flex-shrink-0 mx-2 rounded text-center"
+          *ngFor="let service of services"
+          style="width: 200px; background: transparent;"
+        >
+          <div class="image-container"
+               style="display: flex; align-items: center; justify-content: center; position: sticky; top: 0;">
+            <img [src]="'assets/img/' + service.img" alt="{{ service.titleKey | translate }}" style="max-width: 100%; max-height: 150px;">
+          </div>
+
+          <div style="background: transparent; margin-top: 50px;">
+            <h5 class="product-title mb-0">
+              <a [routerLink]="service.link" class="product-link">{{ service.titleKey | translate }}</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- سهم اليمين -->
+      <button class="btn btn-warning ms-3" (click)="scrollServices(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="contact-line py-3 text-center">
+  <h6 class="mb-0">
+    {{ 'CONTACT_DESCRIPTION' | translate }} >
+    <a routerLink="/contact-us" class="link-blue">{{ 'CONTACT_BTN' | translate }}</a>
+  </h6>
+</div>
+
+<!-- Why Etqan Section -->
+<section id="why-etqan" class="py-5"
+         [ngClass]="{'text-end': currentLang === 'ar', 'text-start': currentLang === 'en'}"
+         [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"
+         style="background-color: #f8f3fa;">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- الصورة -->
+      <div class="col-lg-6 text-center position-relative order-lg-2"
+           [ngClass]="{'order-lg-1': currentLang === 'en', 'order-lg-2': currentLang === 'ar'}">
+        <div class="team-image position-relative d-inline-block">
+          <img src="assets/img/team.png" alt="Etqan Team" class="img-fluid rounded shadow-sm" />
+        </div>
+      </div>
+
+      <!-- النص -->
+      <div class="col-lg-6 order-lg-1"
+           [ngClass]="{'text-end': currentLang === 'ar', 'text-start': currentLang === 'en',
+                       'order-lg-2': currentLang === 'en', 'order-lg-1': currentLang === 'ar'}">
+        <h2 class="fw-bold mb-3 text-dark">{{ 'WHY_ETQAN_TITLE' | translate }}</h2>
+        <p class="text-muted">{{ 'WHY_ETQAN_DESCRIPTION' | translate }}</p>
+        <ul class="list-unstyled text-dark">
+          <li>
+            <i class="fas fa-check text-danger" [ngClass]="{'ms-2': currentLang==='ar', 'me-2': currentLang==='en'}"></i>
+            {{ 'WHY_ETQAN_ITEM1' | translate }}
+          </li>
+          <li>
+            <i class="fas fa-check text-danger" [ngClass]="{'ms-2': currentLang==='ar', 'me-2': currentLang==='en'}"></i>
+            {{ 'WHY_ETQAN_ITEM2' | translate }}
+          </li>
+          <li>
+            <i class="fas fa-check text-danger" [ngClass]="{'ms-2': currentLang==='ar', 'me-2': currentLang==='en'}"></i>
+            {{ 'WHY_ETQAN_ITEM3' | translate }}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Features Section -->
+<section id="why" class="why-choose py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">{{ 'FEATURES_TITLE' | translate }}</h2>
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-box p-4">
+          <i class="fas fa-users fa-2x text-warning mb-3"></i>
+          <h5>{{ 'FEATURES_BOX1_TITLE' | translate }}</h5>
+          <p>{{ 'FEATURES_BOX1_DESC' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-box p-4">
+          <i class="fas fa-shield-alt fa-2x text-warning mb-3"></i>
+          <h5>{{ 'FEATURES_BOX2_TITLE' | translate }}</h5>
+          <p>{{ 'FEATURES_BOX2_DESC' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-box p-4 text-center">
+          <i class="fas fa-cogs fa-2x text-warning mb-3"></i>
+          <h5>{{ 'FEATURES_BOX3_TITLE' | translate }}</h5>
+          <p>{{ 'FEATURES_BOX3_DESC' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-box p-4 text-center">
+          <i class="fas fa-hands-helping fa-2x text-warning mb-3"></i>
+          <h5>{{ 'FEATURES_BOX4_TITLE' | translate }}</h5>
+          <p>{{ 'FEATURES_BOX4_DESC' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-box p-4 text-center">
+          <i class="fas fa-user-shield fa-2x text-warning mb-3"></i>
+          <h5>{{ 'FEATURES_BOX5_TITLE' | translate }}</h5>
+          <p>{{ 'FEATURES_BOX5_DESC' | translate }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<!-- About Section -->
+<section id="about" class="about py-5 position-relative text-white"
+         [ngClass]="{'text-end': currentLang === 'ar', 'text-start': currentLang === 'en'}">
+
+  <!-- الخلفية -->
+  <div class="about-bg position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <div class="container position-relative">
+    <div class="row align-items-center">
+
+      <!-- النص -->
+      <div class="col-lg-6" [ngClass]="{'text-end': currentLang === 'ar', 'text-start': currentLang === 'en'}">
+        <h2 class="mb-3 fw-bold" style="color: #fff;">
+          {{ 'ABOUT_TITLE' | translate }}
+        </h2>
+        <p class="mb-4">{{ 'ABOUT_DESCRIPTION' | translate }}</p>
+        <a href="#services" routerLink="/home-about" class="btn btn-warning fw-bold px-4">
+          {{ 'ABOUT_BTN' | translate }}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact py-5" [ngClass]="{'text-end': currentLang==='ar', 'text-start': currentLang==='en'}" style="background-color: #111; color: #fff;">
+  <div class="container">
+
+    <!-- النص -->
+    <div [ngClass]="{'text-end': currentLang==='ar', 'text-start': currentLang==='en'}" class="mb-4">
+      <h2 class="mb-3 fw-bold" style="color: #fffb;">{{ 'CONTACT_TITLE' | translate }}</h2>
+      <p class="mb-0">
+        {{ 'CONTACT_DESCRIPTION' | translate }}
+        <a href="tel:01020985559" class="text-danger phone-link">01110074501</a>
+      </p>
+    </div>
+
+    <!-- الزر -->
+    <div [ngClass]="{'text-start': currentLang==='ar', 'text-end': currentLang==='en'}" class="mt-3">
+      <a routerLink="/contact-us" class="btn btn-warning">{{ 'CONTACT_BTN' | translate }}</a>
+    </div>
+
+  </div>
+</section>
+

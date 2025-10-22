@@ -1,0 +1,140 @@
+<section class="mobile-only" style="height: 100px;"></section>
+
+<style>
+  /* بشكل افتراضي نخفي السكشن */
+  .mobile-only {
+    display: none;
+  }
+
+  /* نعرضه فقط على الشاشات الصغيرة (مثلاً أقل من 768px) */
+  @media (max-width: 768px) {
+    .mobile-only {
+      display: block;
+    }
+  }
+</style>
+
+
+<section class="about-intro position-relative text-white py-5" [dir]="currentLang">
+  <div class="about-bg"></div>
+  <div class="container position-relative z-1 text-center">
+    <h1 class="fw-bold mb-3"  >
+      {{ currentLang === 'ar' ? 'تعرف على شركتنا' : 'Get to Know Our Company' }}
+    </h1>
+    <p class="text-muted"
+       [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">
+      {{ currentLang === 'ar'
+      ? 'شركة الإتقان هي جزء من مجموعة شركات دار، وتعد واحدة من الشركات الرائدة في مجال الميكانيكا الكهربائية والميكانيكية وأنظمة التيار الخفيف في السوق المصرية. منذ تأسيسها، نركز على الابتكار واعتماد أحدث التقنيات لتقديم حلول متكاملة تلبي احتياجات السوق المتطورة والمتزايدة، مع الحرص على الجودة والكفاءة في كل مشروع.'
+      : 'Itqan is part of Dar Group and is recognized as one of the leading companies in electrical and mechanical systems, as well as low-current solutions in the Egyptian market. Since its establishment, we have focused on innovation and implementing the latest technologies to deliver comprehensive solutions that meet the evolving needs of the market, while ensuring quality and efficiency in every project' }}
+    </p>
+    <p class="text-muted"
+       [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">
+      {{ currentLang === 'ar'
+      ? 'تأسسنا عام ٢٠٠٩، ومنذ ذلك الحين، تخصصنا في تصميم وتركيب وصيانة أنظمة تيار منخفض متطورة تعزز السلامة، الكفاءة، والاتصال للعملاء السكنيين والتجاريين والصناعيين على حد سواء. لقد نفذنا مشاريع ناجحة مع مؤسسات رائدة مثل جامعة CIC، وجامعة دلتا، وأكاديمية وادي النيل، وكذلك مع شركات كبرى مثل شاكر، سفنكس، مونتن فيو، بلمهيلز، وليجراند، بالإضافة إلى مستشفيات دار الفؤاد، مما يعكس ثقة العملاء في خبرتنا وجودة حلولنا.'
+      : 'Founded in 2009, we specialize in designing, installing, and maintaining advanced low-current systems that enhance safety, efficiency, and connectivity for residential, commercial, and industrial clients alike. We have successfully executed projects with leading institutions such as CIC University, Delta University, and Wadi El Nil Academy, as well as major companies including Shaker, Sphinx, Mountain View, Palmhills, Legrand, and prestigious healthcare facilities like Dar Al Fouad Hospitals, demonstrating our clients’ trust in our expertise and the quality of our solutions ' }}
+    </p>
+
+    <p class="text-muted"
+       [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">
+      {{ currentLang === 'ar'
+      ? 'مع فريق من المحترفين المعتمدين ونهج يركز على العملاء، نقدم حلولاً مصممة خصيصاً لتلبي المتطلبات المعقدة للبنية التحتية الحديثة. نحن لا نوفر فقط خدمات تركيب وتشغيل الأنظمة، بل نقدم أيضاً دعمًا مستمرًا وخدمات ما بعد البيع لضمان استمرارية الأداء وتحقيق أقصى استفادة من حلولنا.'
+      : 'With a team of certified professionals and a customer-focused approach, we provide tailored solutions to meet the complex demands of modern infrastructure. We not only deliver installation and operational services but also provide continuous support and after-sales service to ensure optimal performance and maximum benefit from our solutions ' }}
+    </p>
+
+
+  </div>
+
+</section>
+
+<!-- About Etqan Section -->
+<!--<section class="about-wrapper py-5"-->
+<!--         [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"-->
+<!--         [ngClass]="{'text-end': currentLang === 'ar', 'text-start': currentLang === 'en'}"-->
+<!--         style="background-color: #fff;">-->
+<!--  <div class="container">-->
+<!--    <div class="row align-items-center">-->
+
+<!--      &lt;!&ndash; الصورة &ndash;&gt;-->
+<!--      <div class="col-lg-6 text-center position-relative"-->
+<!--           [ngClass]="{'order-lg-2': currentLang === 'ar', 'order-lg-1': currentLang === 'en'}">-->
+<!--        <div class="about-image-container position-relative d-inline-block">-->
+<!--          <img src="assets/img/about-image.jpg" alt="About Itqan" class="about-image img-fluid rounded shadow-sm">-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; النص &ndash;&gt;-->
+<!--      <div class="col-lg-6 text-content"-->
+<!--           [ngClass]="{'order-lg-1': currentLang === 'ar', 'order-lg-2': currentLang === 'en'}"-->
+<!--           [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">-->
+<!--        <h2 class="fw-bold mb-3 text-dark"-->
+<!--            [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">-->
+<!--          {{ currentLang === 'ar' ? 'نبذة عن شركة إتقان' : 'About Itqan Company' }}-->
+<!--        </h2>-->
+
+<!--        <p class="text-muted"-->
+<!--           [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">-->
+<!--          {{ currentLang === 'ar'-->
+<!--          ? 'شركة الإتقان هي جزء من مجموعة شركات دار، وهي شركة رائدة في توفير منتجات الميكانيكا الكهربائية والميكانيكية وأنظمة التيار الخفيف في السوق المصرية منذ سنوات عديدة.'-->
+<!--          : 'Itqan is part of Dar Group, a leading provider of electrical, mechanical, and low-current systems in the Egyptian market for many years' }}-->
+<!--        </p>-->
+
+<!--        <p class="text-muted"-->
+<!--           [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">-->
+<!--          {{ currentLang === 'ar'-->
+<!--          ? 'تأسسنا عام ٢٠٠٩، ونتخصص في تصميم وتركيب وصيانة أنظمة تيار منخفض متطورة تعزز السلامة والكفاءة والاتصال للعملاء السكنيين والتجاريين والصناعيين.'-->
+<!--          : 'Founded in 2009, we specialize in designing, installing, and maintaining advanced low-current systems that enhance safety, efficiency, and connectivity for residential, commercial, and industrial clients ' }}-->
+<!--        </p>-->
+
+<!--        <p class="text-muted"-->
+<!--           [style.text-align]="currentLang === 'ar' ? 'right' : 'left'">-->
+<!--          {{ currentLang === 'ar'-->
+<!--          ? 'مع فريق من المحترفين المعتمدين ونهج يركز على العملاء، نقدم حلولاً مصممة خصيصاً لتلبي المتطلبات المتطورة للبنية التحتية الحديثة.'-->
+<!--          : 'With a team of certified professionals and a customer-focused approach, we provide tailored solutions to meet the evolving demands of modern infrastructure ' }}-->
+<!--        </p>-->
+
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!-- Why Choose Section -->
+<section id="why" class="why-choose py-5" [dir]="currentLang">
+  <div class="container text-center">
+    <h2 class="mb-4">
+      {{ currentLang === 'ar' ? 'لماذا تختار إتقان؟' : '?Why Choose Itqan' }}
+    </h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let item of features">
+        <div class="feature-box p-4">
+          <i [class]="item.icon + ' fa-2x text-warning mb-3'"></i>
+          <h5>{{ currentLang === 'ar' ? item.title_ar : item.title_en }}</h5>
+          <p>{{ currentLang === 'ar' ? item.desc_ar : item.desc_en }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision and Mission -->
+<section id="vision-mission" [dir]="currentLang">
+  <div class="container">
+    <h2 class="section-title">
+      {{ currentLang === 'ar' ? 'الرؤية والرسالة' : 'Vision and Mission' }}
+    </h2>
+    <div class="split-section">
+      <div class="left-side">
+        <div class="card" *ngFor="let panel of visionPanels; let i = index">
+          <button class="accordion" (click)="togglePanel(i)">
+            {{ currentLang === 'ar' ? panel.title_ar : panel.title_en }}
+            <span class="icon" [class.active]="panels[i]">+</span>
+          </button>
+          <div class="panel" [style.display]="panels[i] ? 'block' : 'none'">
+            <p>{{ currentLang === 'ar' ? panel.text_ar : panel.text_en }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-side"></div>
+    </div>
+  </div>
+</section>

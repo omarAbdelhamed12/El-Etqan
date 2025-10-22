@@ -1,0 +1,383 @@
+.contact-header {
+  background: url('/assets/img/about-image.jpg') center center / cover no-repeat;
+  height: 45vh;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* النصوص داخل الهيدر */
+.contact-header h1,
+.contact-header p {
+  color: black;
+}
+
+/* الكونتينر */
+.contact-header .container {
+  position: relative;
+  z-index: 2;
+  transform: translateY(40px);
+}
+
+/* البريدكرم */
+.breadcrumb {
+  background: transparent;
+  font-size: 1.1rem;
+  justify-content: center;
+}
+
+/* 🔹 تنسيق الـ breadcrumb */
+.breadcrumb {
+  background: transparent;
+  font-size: 1.1rem;
+  justify-content: center;
+  direction: rtl; /* مهم عشان ترتيب العناصر */
+}
+
+/* ❌ نحذف السهم الافتراضي */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: none;
+}
+
+
+
+
+/* الصفحة الرئيسية: أبيض ينور أسود */
+.breadcrumb-item a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #000000 !important;
+}
+
+/* الصفحة الحالية: أسود ينور أزرق */
+.breadcrumb-item.active {
+  color: #000000 !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
+
+/* 🔹 الصفحة الحالية (أسود ينور أزرق) */
+.breadcrumb-item.active {
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
+/* عناوين التواصل */
+.contact-info h3,
+.contact-info h4 {
+  font-weight: 700;
+  color: #003399;
+}
+
+/* جعل روابط التواصل عمودية ومتباعدة بشكل أنيق */
+.contact-info a {
+  color: black;
+  text-decoration: none;
+  display: block; /* يحول كل لينك إلى سطر منفصل */
+  margin-bottom: 20px; /* مسافة عمودية بين كل لينك */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #003399; /* أحمر عند hover */
+  transform: translateX(-3px); /* حركة خفيفة عند المرور */
+}
+.contact-section {
+  background: linear-gradient(to right, #f8faff, #ffffff);
+}
+
+.contact-form {
+  border: 1px solid #e6e9ef;
+  transition: 0.3s;
+}
+
+.contact-form:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.btn-warning {
+  background-color: #003399;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #003056;
+}
+.contact-form {
+  border: none !important; /* حذف الحدود */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* ظل ناعم */
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.btn-warning {
+  background-color: #003399;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-warning:hover {
+  background-color: #001f66;
+}
+/* Contact Section */
+.contact-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e8ecef 100%);
+}
+
+/* Contact Form Container */
+.contact-form {
+  border: 1px solid #e0e0e0;
+}
+
+/* Form Title */
+.contact-form h3 {
+  font-size: 1.8rem;
+  color: #1a3c6d;
+}
+
+/* Form Labels */
+.contact-form .form-label {
+  font-size: 1rem;
+}
+
+/* Form Inputs and Select */
+.contact-form .form-control,
+.contact-form .form-select {
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: #1a3c6d;
+  box-shadow: 0 0 5px rgba(26, 60, 109, 0.3);
+}
+
+/* Textarea */
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.contact-form .btn-warning {
+  background: #003056;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn-warning:hover {
+  background: #003056;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+  .contact-form h3 {
+    font-size: 1.5rem;
+  }
+  .contact-form .btn-warning {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+/* ملف: src/app/contact-us/contact-us.component.css */
+
+/* عام */
+.contact-page, .contact-page * { box-sizing: border-box; }
+.contact-page a { color: #003399; }
+
+/* اللوت الأساسي */
+.contact-page .contact-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* info panel (يمين) */
+.info-panel {
+  flex: 0 0 42%;
+  background: transparent;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-panel .title {
+  font-size: 28px;
+  color: #003056;
+  margin-bottom: 10px;
+}
+.info-panel .desc {
+  color: #666;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.contact-list { padding: 0; list-style: none; color: #444; }
+.contact-list li { margin-bottom: 12px; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+
+/* form panel (يسار) */
+.form-panel {
+  flex: 0 0 52%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: flex-start; /* يرفع المحتوى لأعلى */
+  margin-top: -20px; /* تقدر تزود أو تقلل الرقم حسب الحاجة */
+}
+
+.form-inner { background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.form-inner .form-label { font-size: 13px; color: #222; }
+
+/* country select + phone */
+.country-code { max-width: 115px; }
+
+/* زر الإرسال */
+.send-btn {
+  background: linear-gradient(90deg,#003056,#003056); /* استخدم لون Figma لو تحب */
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(217,20,20,0.18);
+}
+/* responsive */
+@media (max-width: 992px) {
+  .contact-wrapper { flex-direction: column-reverse; gap: 20px; }
+  .info-panel, .form-panel { flex: 1 1 100%; }
+  .side-image { height: 220px; }
+}
+
+
+/* 🎯 تحسين صفحة التواصل على الموبايل */
+@media (max-width: 768px) {
+
+  /* نخلي كل العناصر عمودية */
+  .contact-wrapper {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 25px !important;
+    padding: 0 10px;
+  }
+
+  /* الفورم ياخد العرض بالكامل */
+  .form-panel {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .form-inner {
+    padding: 18px 15px !important;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .form-inner .form-label {
+    font-size: 14px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .send-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  /* النصوص */
+  .info-panel {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .info-panel .title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .info-panel .desc {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* صورة التواصل */
+  .contact-image img {
+    width: 90%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* قسم معلومات الاتصال */
+  .contact-info .row {
+    flex-direction: column-reverse !important;
+    text-align: center !important;
+  }
+
+  .contact-details {
+    margin-top: 20px;
+  }
+
+  .contact-info i {
+    display: none; /* نخفف الزحمة بإخفاء الأيقونات الصغيرة */
+  }
+
+  /* الخريطة */
+  iframe {
+    height: 250px !important;
+    border-radius: 8px;
+  }
+
+  .map-btn {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+
+  /* الهيدر */
+  .contact-header {
+    height: 30vh !important;
+    background-position: center !important;
+  }
+
+  .contact-header h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem !important;
+  }
+}
