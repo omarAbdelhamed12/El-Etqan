@@ -18,21 +18,17 @@ export class HomeComponent implements OnInit {
     private homeService: HomeService,
     private translate: TranslateService // 🔹 خدمة الترجمة
   ) {
-    // ضبط اللغة الافتراضية
-    this.translate.setDefaultLang('ar');
-    this.currentLang = 'ar';
-    this.translate.use(this.currentLang);
 
-    // متابعة أي تغيير في اللغة
-    this.translate.onLangChange.subscribe(lang => {
-      this.currentLang = lang.lang;
-    });
   }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
     // جلب الخدمات من HomeService
     this.services = this.homeService.getServices();
+    this.currentLang = this.translate.currentLang || 'ar';
+    this.translate.onLangChange.subscribe(event => {
+      this.currentLang = event.lang;
+    });
   }
 
   // tslint:disable-next-line:typedef

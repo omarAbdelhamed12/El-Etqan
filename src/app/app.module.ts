@@ -23,6 +23,7 @@ import { PartnersComponent } from './componants/partners/partners.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {ContactUsComponent} from './componants/contact-us/contact-us.component';
+
 // 👈 أي مكونات تانية تضيفها هنا
 
 // 🌍 Routes

@@ -15,13 +15,12 @@
     <div class="collapse navbar-collapse" [class.show]="menuOpen">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
 
+
         <li class="nav-item">
           <a class="nav-link" href="#" (click)="goHome($event)">
             {{ 'HOME' | translate }}
           </a>
         </li>
-
-
 
 
         <li class="nav-item dropdown">
@@ -53,13 +52,11 @@
           <button *ngIf="currentLang === 'ar'" class="btn btn-warning btn-sm" (click)="switchLanguage('en')">
             English
           </button>
-
           <!-- لو اللغة الحالية إنجليزية، اعرض زر عربي فقط -->
           <button *ngIf="currentLang === 'en'" class="btn btn-warning btn-sm" (click)="switchLanguage('ar')">
             عربي
           </button>
         </li>
-
       </ul>
     </div>
   </div>

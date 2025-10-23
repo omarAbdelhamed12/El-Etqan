@@ -16,14 +16,14 @@
   font-weight: 700;
   color: #fff;
   margin-bottom: 15px;
-  transform: translateY(60px);
+  transform: translateY(40px);
 }
 
 /* 🔹 الوصف */
 .camera-header p {
   font-size: 0.9rem;
   color: #f1f1f1;
-  transform: translateY(60px);
+  transform: translateY(40px);
   line-height: 1.7;
 }
 

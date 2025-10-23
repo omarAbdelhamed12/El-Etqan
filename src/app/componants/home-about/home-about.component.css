@@ -52,9 +52,10 @@
   font-size: 1.1rem;
 }
 /* Responsive Mobile */
-@media (max-width: 768px) {
+/* ✅ الوضع العمودي (الموبايل واقف) */
+@media (max-width: 768px) and (orientation: portrait) {
   .about-intro {
-    padding-top: 220px; /* زودنا المسافة تحت الهيدر */
+    padding-top: 220px;
     padding-bottom: 40px;
   }
   .about-intro .container {
@@ -71,6 +72,24 @@
     margin-bottom: 10px;
   }
 }
+
+/* ✅ الوضع العرضي (الموبايل مقلوب على جنبه) */
+@media (max-height: 600px) and (orientation: landscape) {
+  .about-intro {
+    padding-top: 150px; /* نقلل شوية المسافة لأن الشاشة أوسع */
+    padding-bottom: 30px;
+  }
+  .about-intro h1 {
+    font-size: 1.2rem; /* نصغر الخط أكثر */
+    margin-bottom: 10px;
+  }
+  .about-intro p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center !important;
+  }
+}
+
 
 
 

@@ -1,4 +1,19 @@
+<section class="mobile-only" style="height: 100px; background-color: #f2f2f2;"></section>
 
+<style>
+  /* نخفي السكشن افتراضيًا */
+  .mobile-only {
+    display: none;
+  }
+
+  /* ✅ يظهر على الموبايل في الاتجاهين (طولي وعرضي) */
+  @media (max-width: 1024px) and (orientation: portrait),
+  (max-height: 600px) and (orientation: landscape) {
+    .mobile-only {
+      display: block;
+    }
+  }
+</style>
 
 <!-- Header Section -->
 <section class="solution-header text-center d-flex align-items-center justify-content-center"

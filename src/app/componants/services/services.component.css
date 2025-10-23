@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center; /* ✅ يوسّط الكلام عموديًا */
   text-align: center;
-  padding-top: 95px; /* ✅ ينزل الكلام لتحت شوية */
+  padding-top: 60px; /* ✅ ينزل الكلام لتحت شوية */
 }
 
 /* عنوان الهيدر */

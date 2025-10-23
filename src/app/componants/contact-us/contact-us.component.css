@@ -20,7 +20,7 @@
 .contact-header .container {
   position: relative;
   z-index: 2;
-  transform: translateY(40px);
+  transform: translateY(10px);
 }
 
 /* البريدكرم */
@@ -381,3 +381,38 @@
     font-size: 0.9rem !important;
   }
 }
+/* ✅ تنسيق خاص بالموبايل */
+/* 🎯 تنسيق الموبايل في الاتجاهين (عمودي + عرضي) */
+@media (max-width: 1024px) and (orientation: portrait),
+(max-height: 600px) and (orientation: landscape) {
+
+  /* نخلي العناصر تتكدس عموديًا */
+  .contact-wrapper {
+    flex-direction: column !important;
+  }
+
+  /* ✅ الصورة تبقى صغيرة فوق */
+  .contact-page .info-panel {
+    flex: 0 0 auto; /* تمنعها من التمدد */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .contact-page .info-panel img {
+    width: 160px; /* تصغير حجم الصورة */
+    height: auto;
+  }
+
+  /* ✅ الفورم ياخد المساحة الأكبر */
+  .contact-page .form-panel {
+    flex: 1; /* ياخد المساحة المتبقية */
+    width: 100%;
+  }
+
+  /* عشان الفورم يبقى مريح في الموبايل */
+  .contact-page .form-inner {
+    padding: 10px 5px;
+  }
+}
+

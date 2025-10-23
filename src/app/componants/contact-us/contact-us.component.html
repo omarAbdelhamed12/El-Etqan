@@ -1,3 +1,22 @@
+<section class="mobile-only" style="height: 100px; background-color: #f2f2f2;"></section>
+
+<style>
+  /* نخفي السكشن افتراضيًا */
+  .mobile-only {
+    display: none;
+  }
+
+  /* ✅ يظهر على الموبايل في الاتجاهين (طولي وعرضي) */
+  @media (max-width: 1024px) and (orientation: portrait),
+  (max-height: 600px) and (orientation: landscape) {
+    .mobile-only {
+      display: block;
+    }
+  }
+</style>
+
+
+
 <!-- الهيدر -->
 <section class="contact-header text-white text-center d-flex align-items-center justify-content-center"
          [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
@@ -120,6 +139,7 @@
           : 'You can request any service or product online using the form below. Fill in your contact details, describe your request, and one of our representatives will get in touch within a few hours...' }}
         </p>
 
+
         <div class="form-inner">
           <form (ngSubmit)="sendEmail()" #contactForm="ngForm" novalidate>
             <div class="row g-2">
@@ -184,7 +204,7 @@
                 <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
               </div>
 
-              <button type="submit" class="btn send-btn" [disabled]="loading">
+              <button type="submit" class="btn send-btn" [disabled]="!contactForm.valid || loading">
                 <span *ngIf="!loading">
                   <i class="fas fa-paper-plane me-2"></i> {{ currentLang === 'ar' ? 'إرسال' : 'Send' }}
                 </span>

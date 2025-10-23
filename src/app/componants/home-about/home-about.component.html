@@ -1,18 +1,20 @@
-<section class="mobile-only" style="height: 100px;"></section>
+<section class="mobile-only" style="height: 100px; background-color: #f2f2f2;"></section>
 
 <style>
-  /* بشكل افتراضي نخفي السكشن */
+  /* نخفي السكشن افتراضيًا */
   .mobile-only {
     display: none;
   }
 
-  /* نعرضه فقط على الشاشات الصغيرة (مثلاً أقل من 768px) */
-  @media (max-width: 768px) {
+  /* ✅ يظهر على الموبايل في الاتجاهين (طولي وعرضي) */
+  @media (max-width: 1024px) and (orientation: portrait),
+  (max-height: 600px) and (orientation: landscape) {
     .mobile-only {
       display: block;
     }
   }
 </style>
+
 
 
 <section class="about-intro position-relative text-white py-5" [dir]="currentLang">

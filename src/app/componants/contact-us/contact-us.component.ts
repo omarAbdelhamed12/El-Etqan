@@ -49,13 +49,13 @@ export class ContactUsComponent {
     ).then(
       (result: EmailJSResponseStatus) => {
         this.loading = false;
-        this.successMessage = '✅ تم إرسال الرسالة بنجاح! سنراسلُك قريبًا.';
+        this.successMessage = '✅✅';
         // تفريغ الحقول (اختياري)
-        this.formData = { first_name: '', last_name:'', country_code:'+20', phone:'', email:'', subject:'', message:'' };
+        this.formData = { first_name: '', last_name: '', country_code: '+20', phone: '', email: '', subject: '', message: '' };
       },
       (error) => {
         this.loading = false;
-        this.errorMessage = '❌ حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقًا.';
+        this.errorMessage = '❌';
         console.error('EmailJS error:', error);
       }
     );
