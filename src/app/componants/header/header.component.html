@@ -1,3 +1,21 @@
+<section class="mobile-only" style="height: 20px; background-color: #f2f2f2;"></section>
+
+<style>
+  /* نخفي السكشن افتراضيًا */
+  .mobile-only {
+    display: none;
+  }
+
+  /* ✅ يظهر على الموبايل في الاتجاهين (طولي وعرضي) */
+  @media (max-width: 1024px) and (orientation: portrait),
+  (max-height: 600px) and (orientation: landscape) {
+    .mobile-only {
+      display: block;
+    }
+  }
+</style>
+
+
 <header class="itqan-header navbar navbar-expand-lg fixed-top shadow-sm">
   <div class="container">
 
@@ -17,7 +35,7 @@
 
 
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="goHome($event)">
+          <a class="nav-link" href="#" (click)="goHome($event); closeMenu() ">
             {{ 'HOME' | translate }}
           </a>
         </li>
@@ -27,29 +45,31 @@
           <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false">{{ 'ABOUT' | translate }}</a>
           <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" routerLink="/home-about">{{ 'COMPANY' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/partner">{{ 'PARTNERS' | translate }}</a></li>
+
+            <li><a class="dropdown-item" routerLink="/home-about" (click)="closeMenu()">{{ 'COMPANY' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/partner" (click)="closeMenu()">{{ 'PARTNERS' | translate }}</a></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" >
           <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
-             data-bs-toggle="dropdown" aria-expanded="false" routerLink="/service">{{ 'TITLE' | translate }}</a>
+             data-bs-toggle="dropdown" aria-expanded="false" >{{ 'TITLE' | translate }}</a>
           <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="servicesDropdown">
-            <li><a class="dropdown-item" routerLink="/camera">{{ 'CAMERA' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/cabling_networking">{{ 'NETWORKING' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/solution">{{ 'SOLUTIONS' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/service" (click)="closeMenu()">{{ 'ALL' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/camera" (click)="closeMenu()">{{ 'CAMERA' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/cabling_networking" (click)="closeMenu()">{{ 'NETWORKING' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/solution" (click)="closeMenu()">{{ 'SOLUTIONS' | translate }}</a></li>
           </ul>
         </li>
 
 
-        <li class="nav-item"><a class="nav-link" routerLink="/partner">{{ 'WORKS' | translate }}</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/contact-us">{{ 'CONTACT' | translate }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/partner" (click)="closeMenu()">{{ 'WORKS' | translate }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contact-us" (click)="closeMenu()">{{ 'CONTACT' | translate }}</a></li>
 
         <!-- 🔹 زر اللغة -->
-        <li class="nav-item d-flex align-items-center ms-3">
+        <li class="nav-item d-flex align-items-center ms-3" (click)="closeMenu()">
           <!-- لو اللغة الحالية عربية، اعرض زر English فقط -->
-          <button *ngIf="currentLang === 'ar'" class="btn btn-warning btn-sm" (click)="switchLanguage('en')">
+          <button *ngIf="currentLang === 'ar'" class="btn btn-warning btn-sm" (click)="switchLanguage('en')" >
             English
           </button>
           <!-- لو اللغة الحالية إنجليزية، اعرض زر عربي فقط -->

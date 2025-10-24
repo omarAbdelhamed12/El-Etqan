@@ -36,10 +36,10 @@ export class HeaderComponent implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
-  // tslint:disable-next-line:typedef
-  closeMenu() {
-    this.menuOpen = false;
-  }
+  // // tslint:disable-next-line:typedef
+  // closeMenu() {
+  //   this.menuOpen = false;
+  // }
 
   // tslint:disable-next-line:typedef
   switchLanguage(lang: string) {
@@ -54,6 +54,12 @@ export class HeaderComponent implements OnInit {
     this.closeMenu();
     if (this.router.url !== '/home') {
       this.router.navigate(['/home']);
+    }
+  }
+  // tslint:disable-next-line:typedef
+  closeMenu() {
+    if (window.innerWidth <= 991) { // ✅ يقفل بس في الموبايل
+      this.menuOpen = false;
     }
   }
 
